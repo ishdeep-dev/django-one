@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>BAseeee</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <ul class="navbar-nav">
+
+          {# Django Home Link / Admin Link / Register Link#}
+          <li class="nav-item active"><a class="navbar-brand" href="{% url 'index' %}">DJANGO</a></li>
+          <li class="nav-item active"><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+          <li class="nav-item active"><a class="navbar-link" href="{% url 'first_app:register' %}">Register</a></li>
+
+          {# Some logic on what to display for last item#}
+          {% if user.is_authenticated %}
+            <li><a class="navbar-link" href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a class="navbar-link" href="{% url 'first_app:user_login' %}">Login</a></li>
+          {% endif %}
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <div class="container">
+<div class="jumbotron">
+  I am in baseeeeeeeeeeee baby
+  </div>
+  </div>
+    {% block body_block %}
+    {% endblock %}
+
+  </body>
+</html>

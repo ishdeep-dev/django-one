@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Deeeply</title>
+    <link rel="stylesheet" href="{%static "css/mystyle.css" %}">
+    
+  </head>
+  <body>
+    <h1>Welcome ISHDEEEEEEp</h1>
+
+    <div class="djangtwo">
+      {% if access_records %}
+      <table>
+        <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Text</th>
+      </thead>
+
+
+    {% for acc in access_records %}
+    <tr>
+      <td>{{acc.name}}</td>
+      <td>{{acc.email}}</td>
+      <td>{{acc.text}}</td>
+    </tr>
+
+    {% endfor %}
+
+      </table>
+
+      {%else %}
+      <p>No acccccessss recordieees found</p>
+      {%endif%}
+
+    </div>
+
+  </body>
+</html>

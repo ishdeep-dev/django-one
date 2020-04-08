@@ -1,0 +1,10 @@
+<!<!DOCTYPE html>
+{%extends "first_app/base.html" %}
+{% block body_block %}
+<h1>Helllo</h1>
+<a href="{% url 'first_app:help1' %}">View Recocrds</a><br>
+<a href="{% url 'first_app:reg2' %}">Reg2</a><br>
+<a href="{% url 'admin:index' %}">Admin</a><br>
+<a href="{% url 'index' %}">Go to home page</a><br>
+<a href="{% url 'first_app:register' %}">Go to registration</a><br>
+{%endblock%}
