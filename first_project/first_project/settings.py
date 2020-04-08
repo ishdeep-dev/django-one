@@ -27,7 +27,7 @@ SECRET_KEY = '#u$7a#@35^$9c8rtb+gpm71ks_*j-s#qwl$)=eik+^4$yzvzvu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ishdeeps.pythonanywhere.com']
 
 
 # Application definition
